@@ -21,6 +21,11 @@
                 <li><a href="index.html#method" class="nav-link">Methodology</a></li>
                 <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -149,6 +154,23 @@
                 observer.observe(el);
             });
             
+            // Mobile menu toggle
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
             const nav = document.querySelector('.main-nav');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 10) {

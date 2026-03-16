@@ -469,6 +469,33 @@ footer {
     color: var(--primary);
 }
 
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+}
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 .footer-legal {
     color: var(--text-muted);
     font-size: 0.8rem;
@@ -495,8 +522,45 @@ footer {
     .scroll-wrapper { display: none; }
 }
 @media (max-width: 768px) {
-    .nav-links { display: none; }
+    /* Mobile Menu */
+    .mobile-menu-btn { display: flex; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-primary);
+        flex-direction: column;
+        padding: 40px 0;
+        gap: 30px;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .nav-links.active { display: flex; }
+    
     .nav-btn { display: none; }
+    
+    /* Justify text alignment for mobile as requested */
+    p {
+        text-align: justify;
+    }
+
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 30px; }
     .hero-title { font-size: 3.5rem; }
+    .hero-subtitle { text-align: justify; }
+
+    /* Portfolio Section Mobile Fixes */
+    .portfolio-showcase {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 40px;
+    }
+    .portfolio-content {
+        padding-right: 0;
+    }
+    .portfolio-header h1 {
+        font-size: 2.5rem !important;
+    }
 }
