@@ -266,11 +266,7 @@ body {
     padding-top: 100px;
 }
 
-.concept-column {
-    display: flex;
-    flex-direction: column;
-    gap: 150px;
-}
+
 
 .concept-block {
     display: flex;
@@ -304,31 +300,7 @@ body {
     max-width: 500px;
 }
 
-.image-showcase {
-    position: sticky;
-    top: 150px;
-}
-.image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 75vh;
-    overflow: hidden;
-    background: var(--bg-secondary);
-}
-.concept-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.image-caption {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-top: 25px;
-}
+
 
 /* --- PORTFOLIO SECTION --- */
 .portfolio-section {
