@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Oak & River Holdings</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts: Inter for utility, Bodoni Moda for headlines -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="assets/oak_and_river_logo_monogreen.png" alt="Oak & River Holdings Logo" class="nav-logo" />
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#vision" class="nav-link">Vision</a></li>
+                <li><a href="index.html#method" class="nav-link">Methodology</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 150px; min-height: 80vh;">
+        <!-- PORTFOLIO HEADER -->
+        <section class="portfolio-header">
+            <div class="container text-center reveal-up">
+                <span class="eyebrow" style="color: var(--accent); letter-spacing: 4px; display: block; margin-bottom: 20px;">Featured Acquisition</span>
+                <h1 style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--primary); margin-bottom: 50px;">ClariView</h1>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section class="portfolio-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="portfolio-showcase reveal-up">
+                    <div class="portfolio-visual" style="background: var(--bg-primary); padding: 50px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color);">
+                        <img src="assets/clariview_dashboard.png" alt="ClariView Executive Dashboard" style="box-shadow: 0 10px 40px rgba(0,0,0,0.1); width: 100%; border-radius: 4px;" />
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-brand">
+                            <span class="eyebrow">Executive Performance Infrastructure</span>
+                            <img src="assets/clariview_logo.png" style="max-width: 200px; margin-top: 15px;" alt="ClariView Logo" />
+                        </div>
+                        <p class="portfolio-desc" style="font-size: 1.15rem;">
+                            ClariView gives CEOs and senior leaders a single, consolidated view of their entire business. It pulls financial, commercial, and operational data out of scattered spreadsheets and into one clear executive dashboard, so they can stop chasing reports and start making better decisions. Now accelerating growth under the structural backing of Oak & River Holdings.
+                        </p>
+                        <ul class="portfolio-stats">
+                            <li><strong>Focus:</strong> Executive Intelligence & Analytics</li>
+                            <li><strong>Integration:</strong> Multi-Department Data Consolidation</li>
+                            <li><strong>Status:</strong> Accelerating Expansion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="assets/oak_and_river_logo_monogreen.png" alt="Logo" class="footer-logo" />
+                <p>Private Acquisitions in Elite Sports and Beyond.</p>
+            </div>
+            <div class="footer-bottom">
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+                <div class="footer-legal">
+                    <p>&copy; 2026 Oak & River Holdings Ltd. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.reveal-up').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
