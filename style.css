@@ -9,7 +9,7 @@
     --text-muted: #6b7a75;  
     --border-color: #e8eae9;
     
-    --font-serif: 'Bodoni Moda', serif;
+    --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
     
     --ease: cubic-bezier(0.25, 1, 0.5, 1);
@@ -86,7 +86,8 @@ body {
     font-weight: 500;
     transition: all 0.3s var(--ease);
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary);
 }
 
